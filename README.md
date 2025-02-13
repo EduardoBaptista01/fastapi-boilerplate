@@ -17,7 +17,7 @@ A minimal and scalable FastAPI boilerplate with database support, testing, and D
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/yourusername/fastapi-boilerplate.git your-project-name
+git clone https://github.com/EduardoBaptista01/fastapi-boilerplate.git your-project-name
 ```
 
 ### 2️⃣ Create a Virtual Environment
