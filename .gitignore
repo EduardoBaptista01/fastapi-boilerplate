@@ -1,0 +1,58 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+*.dll
+
+# Virtual environment
+venv/
+.env
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# FastAPI database files
+todos.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# Alembic migration cache
+/alembic/versions/__pycache__/
+/alembic/__pycache__/
+
+# Logs and debug files
+*.log
+logs/
+debug.log
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.iml
+
+# Mypy and linting cache
+.mypy_cache/
+.pytest_cache/
+pylint.log
+
+# Docker-related files
+**/.dockerignore
+**/.env
+docker-compose.override.yml
+
+# System-specific files
+.DS_Store
+Thumbs.db
+
+# Python test and coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+*.cover
+nosetests.xml
+pytest_cache/
+
+# Pytest cache
+.pytest_cache/
