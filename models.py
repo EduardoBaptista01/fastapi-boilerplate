@@ -1,5 +1,6 @@
 
-from sqlalchemy.orm import sessionmaker, DeclarativeBase
+from sqlalchemy.orm import sessionmaker, DeclarativeBase, Mapped, mapped_column
+from datetime import datetime
 import sqlalchemy as sa
 from dotenv import load_dotenv
 import os
@@ -20,9 +21,10 @@ class Base(DeclarativeBase):
 # SQLAlchemy model for Todo
 class Todo(Base):
     __tablename__ = "todos"
-    id = sa.Column(sa.Integer, primary_key=True, index=True)
-    title = sa.Column(sa.String, index=True)
-    completed = sa.Column(sa.Boolean, default=False)
+    id = sa.Column(sa.Integer, primary_key=True)
+    title: Mapped[str]  = mapped_column(sa.String(50), index=True, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(sa.DateTime, nullable=False, server_default=sa.func.now())
+    completed: Mapped[bool] = mapped_column(sa.Boolean, nullable=True, default=False)
 
 # Create the database tables if using SQLite (not needed for other DBs)
 if "sqlite" in DATABASE_URL:
